@@ -1,6 +1,9 @@
 (function(){
 'use strict';
 
+//Document elements
+var $display = document.querySelector('.display');
+
 
 //Possible words
 var words = [
@@ -27,10 +30,14 @@ for (var i = 0; i < randomWord.length; i++) {
   answerArray[i] = "_";
 }
 
+
+
 var remainingLetters = randomWord.length;
 
 while(remainingLetters > 0) {
-  alert(answerArray.join(' '));
+  //Displays correct guesses
+  $display.innerText = answerArray;
+  //Prompts player for guess
   var guess = prompt('Guess a letter! (or click "Cancel" to stop playing.)');
 
   if (guess === null) {
@@ -46,7 +53,9 @@ while(remainingLetters > 0) {
     }
   }
 
+  $display.innerText = answerArray;
 }
+
 
 
 }());
