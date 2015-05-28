@@ -7,16 +7,17 @@ var $display = document.querySelector('.display');
 
 //Possible words
 var words = [
-  'javascript',
-  'monkey',
-  'llama',
-  'albino',
-  'pancake',
-  'tigerlilly',
-  'giraffe',
-  'panda',
-  'chemicals',
-  'snowcone',
+  // 'javascript',
+  // 'monkey',
+  // 'llama',
+  // 'albino',
+  // 'pancake',
+  // 'tigerlilly',
+  // 'giraffe',
+  // 'panda',
+  // 'chemicals',
+  // 'snowcone',
+  'pop'
 ];
 
 //Pick a random word
@@ -52,10 +53,9 @@ while(remainingLetters > 0) {
       }
     }
   }
-
-  $display.innerText = answerArray;
 }
 
-
+//Display answer
+$display.innerText = 'The answer was ' + randomWord+'!';
 
 }());
